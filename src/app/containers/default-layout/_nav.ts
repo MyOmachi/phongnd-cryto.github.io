@@ -11,6 +11,11 @@ export const navItems: INavData[] = [
     }
   },
   {
+    name: 'Tokens List',
+    url: '/tokens-list',
+    iconComponent: { name: 'cil-list-numbered' }
+  },
+  {
     title: true,
     name: 'Theme'
   },
