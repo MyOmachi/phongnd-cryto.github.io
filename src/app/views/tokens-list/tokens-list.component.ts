@@ -11,4 +11,7 @@ import { Firestore } from '@angular/fire/firestore';
 })
 export class TokensListComponent {
   firestore: Firestore = inject(Firestore);
+  
+  constructor() {
+  }
 }
