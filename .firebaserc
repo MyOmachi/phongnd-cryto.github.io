@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "cryto-410102": {
+      "hosting": {
+        "coreui-free-angular-admin-template": [
+          "cryto-410102"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "cryto-410102"
+  }
+}

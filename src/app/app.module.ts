@@ -15,6 +15,8 @@ import { AppComponent } from './app.component';
 // Import containers
 import { DefaultFooterComponent, DefaultHeaderComponent, DefaultLayoutComponent } from './containers';
 
+import { apikey } from '../apikey';
+
 import {
   AvatarModule,
   BadgeModule,
@@ -37,6 +39,8 @@ import {
 } from '@coreui/angular';
 
 import { IconModule, IconSetService } from '@coreui/icons-angular';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 
 const APP_CONTAINERS = [
   DefaultFooterComponent,
@@ -72,7 +76,9 @@ const APP_CONTAINERS = [
     BadgeModule,
     ListGroupModule,
     CardModule,
-    NgScrollbarModule
+    NgScrollbarModule,
+    provideFirebaseApp(() => initializeApp(apikey.firebaseConfig)),
+    provideFirestore(() => getFirestore())
   ],
   providers: [
     {

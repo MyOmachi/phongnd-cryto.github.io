@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Firestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-tokens-list',
@@ -9,5 +10,5 @@ import { CommonModule } from '@angular/common';
   styleUrl: './tokens-list.component.scss'
 })
 export class TokensListComponent {
-
+  firestore: Firestore = inject(Firestore);
 }
